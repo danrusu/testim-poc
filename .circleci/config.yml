@@ -7,12 +7,7 @@ jobs:
       - image: testim/docker-cli
     steps:
       - run: mkdir -p $CIRCLE_TEST_REPORTS/testim/
-      - run: |
-          testim 
-          --token "NvXFCLAm3IXSIlNYvLpnf2NYX6NTfrOjlSRvQzy8994uWPMDUI" 
-          --project "yY3u8G4AZyM9jXGdVl1t" 
-          --grid "Testim-Grid" 
-          --report-file $CIRCLE_TEST_REPORTS/testim/results.xml
+      - run: testim --token "NvXFCLAm3IXSIlNYvLpnf2NYX6NTfrOjlSRvQzy8994uWPMDUI" --project "yY3u8G4AZyM9jXGdVl1t" --grid "Testim-Grid" --report-file $CIRCLE_TEST_REPORTS/testim/results.xml
       - store_artifacts:
           path: /tmp/circleci-test-results
       - store_test_results:
