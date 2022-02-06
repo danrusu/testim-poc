@@ -16,7 +16,13 @@ export TESTIM_USER=*****
 npm install
 ```
 
-3. [Run the tests](./run.sh)
+3. Connect to Testim.io CLI from one terminal
+
+```
+npm run connect
+```
+
+4. [Run the tests](./run.sh)
 
 ```
 npm test
